@@ -62,16 +62,16 @@ int main( )
 		vdm::write_phys( get_physical_address( modules.first + ( size_of_code - remainder ) + 0x2000 ), reinterpret_cast< void* >( modules.second + ( size_of_code - remainder ) + 0x1000 ), remainder );
 	}
 
-	std::printf( "[+] once game open press 'enter'\n" );
+	std::printf( "[+] once game open press 'enter'\n[+] start hit keys on keyboard for injection\n" );
 
 	std::getchar( );
 
 	DWORD process_id;
-	const auto thread_id = GetWindowThreadProcessId( FindWindowA( "UnityWndClass", nullptr ), &process_id );
+	const auto thread_id = GetWindowThreadProcessId( FindWindowA( "UnrealWindow", nullptr ), &process_id );
 
 	const auto hook = SetWindowsHookExA( WH_KEYBOARD, reinterpret_cast< HOOKPROC >( modules.first + 0x2000 ), reinterpret_cast< HMODULE >( modules.first ), thread_id );
 	
-	std::printf( "[+] injected" );
+	std::printf( "[+] finished" );
 
 	return std::getchar( );
 }
