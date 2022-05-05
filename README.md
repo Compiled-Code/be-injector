@@ -11,6 +11,9 @@ BattlEye does not verify the integrity of the modules within the game.  PUBG, on
 - Windows function calls
 - Signature Scans
 
+### Note
+For this example, just the code section is mapped within the game.
+
 ![show](https://media.discordapp.net/attachments/958184678215528500/971602461808803910/unknown.png)
 
 ## Credits
