@@ -1,5 +1,4 @@
 #include <Windows.h>
-#include <atomic>
 #include "dependencies/lazy_importer/lazy_importer.hpp"
 
 
