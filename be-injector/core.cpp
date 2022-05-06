@@ -47,7 +47,7 @@ int main( )
 
 	if ( ( size_of_code - remainder ) >= 0x1000 )
 	{
-		for ( auto page = 0x1000; page < size_of_code - remainder; ++page )
+		for ( auto page = 0x1000; page < size_of_code - remainder; page += 0x1000 )
 		{
 			std::printf( "[+] writing region with size 0x1000 at holder+%X\n", page + 0x1000 );
 
